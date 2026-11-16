@@ -99,7 +99,7 @@ Re-running reproduces the notebook's saved MSE and R2 exactly (verified with sci
 
 ```
 Data Sci (Airbnb data)/
-  airbnb.csv     raw dataset (27,106 rows, 16 columns; source/licence: TODO: confirm)
+  airbnb.csv     raw dataset (27,106 rows, 16 columns)
   code.ipynb     EDA, cleaning, modelling (about 157 lines of code, 17 code cells)
   Report.pdf     author's written report
 docs/images/     figures used in this README
@@ -115,5 +115,5 @@ docs/images/     figures used in this README
 - **Algorithms:** Random Forest regression, Lasso (L1) regression with grid-searched alpha and 5-fold CV, IQR outlier removal, one-hot encoding, standardisation.
 - **Measurable numbers (verified by re-run):** 27,106 raw rows to 8,742 cleaned rows; 189 encoded features; test R2 0.5030 (Random Forest) vs 0.4914 (Lasso); test MSE 2210.20 vs 2261.61; RMSE about 47 USD; MAE 33.94 vs 35.05; mean-price baseline R2 -0.003.
 - **Hard problems and solutions:** corrupted data (negative prices and counts, availability above 365, junk `EXOTIC` category labels, about 2% nulls in most columns and about 22% in last_review/reviews_per_month) handled by rule-based filtering, rare-category thresholding and IQR trimming; model comparison on a leakage-safe pipeline (encoder and scaler fit on training data only).
-- **Outcome:** Random Forest selected as best model; findings written up in Report.pdf. Grade or course result: TODO: confirm.
-- **Data note:** dataset appears to be a real NYC Airbnb extract with artificially injected noise (negative values, junk labels, nulls); origin: TODO: confirm.
+- **Outcome:** Random Forest selected as best model; findings written up in Report.pdf.
+- **Data note:** dataset appears to be a real NYC Airbnb extract with artificially injected noise (negative values, junk labels, nulls).
